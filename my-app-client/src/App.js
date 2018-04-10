@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg'; maybe add your own logo later?
 import './App.css';
 
 class App extends Component {
@@ -7,11 +7,12 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+            <h1>UGLY DELICIOUS</h1>
+            <p>Because ugly food needs love, too.</p>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+           Welcome to Ugly Delicious. We connect grocery stores looking to sell imperfect produce with
+           individuals and businesses looking to purchase them.
         </p>
       </div>
     );
