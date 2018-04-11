@@ -31,8 +31,39 @@
   height: 600px;
 }
 
-.homepage-intro {
+.container {
+    position: relative;
+}
 
+.homepage-intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  color: white;
+  padding: 40px 80px 40px 80px;
+  border-radius: 25px;
+  border: 2px solid #FFFFFF;
+  font-size: 120%;
+}
+
+.homepage-intro #intro-button {
+    background-color: #e7e7e7;
+    color: black;
+    font-size: 20px;
+    padding: 14px 40px;
+    border-radius: 8px;
+}
+
+.homepage-intro #intro-button:hover {
+    background-color: #FFFFFF;
+}
+
+.homepage-intro .divider{
+    width:100px;
+    height:auto;
+    display:inline-block;
 }
 
 /* @keyframes App-logo-spin {
