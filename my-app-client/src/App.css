@@ -23,9 +23,17 @@
   font-style: italic;
 }
 
-/* .App-intro {
-  background:url(details/img/homepage.png);
-} */
+.App-intro {
+  background:url(details/img/homepage-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+
+.homepage-intro {
+
+}
 
 /* @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
