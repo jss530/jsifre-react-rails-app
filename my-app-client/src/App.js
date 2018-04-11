@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg'; maybe add your own logo later?
 import './App.css';
 
 class App extends Component {
