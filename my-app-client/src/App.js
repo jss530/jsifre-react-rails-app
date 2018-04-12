@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+import Suppliers from './components/Suppliers';
+import Purchasers from './components/Purchasers';
 
 class App extends Component {
   render() {
@@ -10,9 +19,15 @@ class App extends Component {
             <p>Because ugly food needs love, too.</p>
         </header>
 
-        <div className="navbar">
-          <p>NavBar</p>
-        </div>
+        <Router>
+          <div>
+           <Navbar />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/suppliers" component={Suppliers} />
+            <Route exact path="/purchasers" component={Purchasers} />
+          </div>
+        </Router>
 
         <div className="container">
           <div className="App-intro">
@@ -32,3 +47,20 @@ class App extends Component {
 }
 
 export default App;
+//
+//
+// const App = (props) => {
+//   return (
+//     <Router>
+//       <div>
+//        <NavBar />
+//         <Route exact path="/" component={Home} />
+//         <Route exact path="/actors" component={Actors} />
+//         <Route exact path="/directors" component={Directors} />
+//         <Route exact path="/movies" component={Movies} />
+//       </div>
+//     </Router>
+//   );
+// };
+//
+// export default App
