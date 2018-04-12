@@ -8,6 +8,15 @@
   height: 80px;
 } */
 
+.navbar {
+  margin: 0;
+  padding: 14px 16px;
+  overflow: hidden;
+  background-color: #333;
+  color: #FFFFFF;
+  text-align: center;
+}
+
 .App-header {
   background-color: #222;
   height: 150px;
