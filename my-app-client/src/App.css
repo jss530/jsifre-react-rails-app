@@ -68,9 +68,3 @@
 .homepage-intro #intro-button:hover {
     background-color: #FFFFFF;
 }
-
-.homepage-intro .divider{
-    width:100px;
-    height:auto;
-    display:inline-block;
-}

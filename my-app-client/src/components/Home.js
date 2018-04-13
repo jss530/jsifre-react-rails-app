@@ -15,8 +15,6 @@ const Home = () => {
              individuals and businesses looking to purchase them.</p>
              <br/>
              <button type="button" id="intro-button">Get started</button>
-             <div class="divider"/>
-             <button type="button" id="intro-button">Log in</button>
            </div>
          </div>
       </div>
