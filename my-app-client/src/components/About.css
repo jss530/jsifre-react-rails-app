@@ -2,6 +2,11 @@
   text-align: center;
 }
 
-#content .col {
+#content .col img {
   float: left;
+  width: 50%;
+}
+
+#content .col .mission-statement {
+  text-align: left;
 }
