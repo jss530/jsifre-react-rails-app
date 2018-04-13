@@ -1,5 +1,6 @@
 .title {
   text-align: center;
+  padding: 20px
 }
 
 #content .col img {
@@ -8,5 +9,7 @@
 }
 
 #content .col .mission-statement {
-  text-align: left;
+  list-style-type: upper-roman;
+  text-align: center;
+  list-style-position: inside;
 }
