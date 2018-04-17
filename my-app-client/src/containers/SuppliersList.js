@@ -1,6 +1,8 @@
 import React from 'react';
-import Suppliers from '../components/Suppliers'
-import SupplierService from '../services/SupplierService'
+import Suppliers from '../components/Suppliers';
+import SupplierService from '../services/SupplierService';
+import { connect } from 'react-redux';
+import { Route, Switch } from 'react-router-dom';
 
 
 class SuppliersList extends React.Component {
@@ -27,8 +29,8 @@ class SuppliersList extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    suppliers: state.supplier
+    suppliers: state.suppliers
   };
 }
 
-export default SuppliersList
+export default connect(mapStateToProps, SupplierService)(SuppliersList);

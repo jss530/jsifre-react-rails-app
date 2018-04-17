@@ -1,11 +1,14 @@
 import React from 'react';
 import './Suppliers.css';
 import SuppliersList from '../containers/SuppliersList'
+import { Link } from 'react-router-dom';
 
 const Suppliers = ( {suppliers} ) => {
   const renderSuppliers = suppliers.map(supplier =>
-    <p>Supplier name</p>
-    <p>Supplier location: {supplier.location}</p>
+    <div>
+      <p>Supplier name</p>
+      <p>Supplier location: {supplier.location}</p>
+    </div>
   )
 
   return (
