@@ -38,4 +38,3 @@ export default connect(mapStateToProps, mapDispatchToProps)(SuppliersPage);
 // }
 
 // // --need to refactor (add actions/reducers) -- i.e redux
-// ---need middleware
