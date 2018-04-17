@@ -8,26 +8,29 @@ import { fetchSuppliers } from '../actions/supplierActions';
 
 
 class SuppliersPage extends Component {
-    <div>
-      <Suppliers suppliers={suppliers} />
-      <Route path={`${match.url}/:supplierId`} component={SupplierShow}/>
-      <Route exact path={match.url} render={() => (
-      <h3>Please select a supplier to see their available inventory.</h3>
-       )}/>
-    </div>;
 
-  const mapStateToProps = state => {
-    return {
-      suppliers: state.suppliers
-    };
+  render() {
+    return(
+      <div>
+        <Suppliers suppliers={suppliers} />
+        <h3>Please select a supplier to see their available inventory.</h3>
+      </div>
+    )}
   }
-}
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
-    fetchSuppliers: fetchSuppliers
-  }, dispatch);
-};
+    const mapStateToProps = state => {
+      return {
+        suppliers: state.suppliers
+      };
+    }
+
+
+  const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators({
+      fetchSuppliers: fetchSuppliers
+    }, dispatch);
+  };
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(SuppliersPage);
 

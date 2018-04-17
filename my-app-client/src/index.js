@@ -8,6 +8,10 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import supplierReducer from './reducers/supplierReducer'
+import Suppliers from './components/Suppliers'
+import SuppliersPage from './containers/SuppliersPage'
+import SupplierShow from './containers/SuppliersShow'
+
 
 const store = createStore(supplierReducer, applyMiddleware(thunk));
 
