@@ -9,6 +9,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Suppliers from './components/Suppliers';
 import Purchasers from './components/Purchasers';
+ 
 
 const App = (props) => {
   return (

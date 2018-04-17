@@ -1,12 +1,17 @@
 import React from 'react';
 import './Suppliers.css';
 
-const Suppliers = () => {
+const Suppliers = ( {suppliers} ) => {
+  const renderSuppliers = suppliers.map(supplier =>
+    <p>Supplier name: {supplier.name}</p>
+    <p>Supplier location: {supplier.location}</p>
+  )
+
   return (
-      <div>
-        <h1> Suppliers Page </h1>
-      </div>
-    )
-  }
+    <div>
+      {renderSuppliers}
+    </div>
+  )
+}
 
 export default Suppliers;
