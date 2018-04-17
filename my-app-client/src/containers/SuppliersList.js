@@ -14,7 +14,7 @@ class SuppliersList extends Component {
   }
 
   componentDidMount() {
-    SupplierService.fetchSuppliers()
+    SupplierService.fetchSuppliers().then(suppliers => this.setState({ suppliers }))
   }
 
   render() {
