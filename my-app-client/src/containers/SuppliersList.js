@@ -1,9 +1,9 @@
 import React from 'react';
-import Suppliers from './components/Suppliers'
-import SupplierService from './services/SupplierService'
+import Suppliers from '../components/Suppliers'
+import SupplierService from '../services/SupplierService'
 
 
-class SuppliersList extends Component {
+class SuppliersList extends React.Component {
 
   constructor() {
     super()
@@ -18,6 +18,7 @@ class SuppliersList extends Component {
   }
 
   render() {
+    console.log("Suppliers equals", this.state.suppliers)
     return (
       <div>Suppliers Page</div>
     )
