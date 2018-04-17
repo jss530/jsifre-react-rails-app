@@ -4,6 +4,8 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';

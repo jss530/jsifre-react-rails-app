@@ -23,14 +23,13 @@ class SuppliersPage extends Component {
   }
 }
 
-// const mapDispatchToProps = (dispatch) => {
-//   /* code change */
-//   return bindActionCreators({
-//     addItem: addItem
-//   }, dispatch);
-// };
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    fetchSuppliers: fetchSuppliers
+  }, dispatch);
+};
 
-export default connect(mapStateToProps)(SuppliersPage);
+export default connect(mapStateToProps, mapDispatchToProps)(SuppliersPage);
 
 
 
@@ -38,6 +37,5 @@ export default connect(mapStateToProps)(SuppliersPage);
 //   SupplierService.fetchSuppliers().then(suppliers => this.setState({ suppliers }))
 // }
 
-// // --this needs to be a class
 // // --need to refactor (add actions/reducers) -- i.e redux
 // ---need middleware
