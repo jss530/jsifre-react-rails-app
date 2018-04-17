@@ -1,19 +1,15 @@
 import React from 'react';
-import './Suppliers.css';
-import SuppliersList from '../containers/SuppliersList'
 import { Link } from 'react-router-dom';
 
-const Suppliers = ( {suppliers} ) => {
+const Suppliers = ({ suppliers }) => {
   const renderSuppliers = suppliers.map(supplier =>
-    <div>
-      <p>Supplier name</p>
+      <p key={supplier.id}>Supplier name: {supplier.name}</p>
       <p>Supplier location: {supplier.location}</p>
-    </div>
   )
 
   return (
     <div>
-      Suppliers Page
+      {renderSuppliers}
     </div>
   )
 }
