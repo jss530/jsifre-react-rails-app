@@ -19,7 +19,7 @@ class SuppliersList extends Component {
 
   render() {
     return (
-      <div>Pets Page</div>
+      <div>Suppliers Page</div>
     )
   }
 };

@@ -3,8 +3,8 @@ import './Suppliers.css';
 
 const Suppliers = ( {suppliers} ) => {
   const renderSuppliers = suppliers.map(supplier =>
-    <p>Supplier name: {supplier.name}</p>
-    <p>Supplier location: {supplier.location}</p>
+    <p>Supplier name</p>
+    // <p>Supplier location: {supplier.location}</p>
   )
 
   return (
