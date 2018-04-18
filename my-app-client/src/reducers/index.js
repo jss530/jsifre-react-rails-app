@@ -3,4 +3,6 @@ import supplierReducer from './supplierReducer'
 
 const rootReducer = combineReducers({
   suppliers: supplierReducer
-})
+});
+
+export default rootReducer;

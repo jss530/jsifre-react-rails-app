@@ -1,4 +1,4 @@
-export default function supplierReducer(state = { suppliers: [] }, action) {
+export default function supplierReducer(state = {suppliers: [] }, action) {
   switch (action.type) {
     case 'FETCH_SUPPLIERS':
       return {
