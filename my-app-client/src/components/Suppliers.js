@@ -14,8 +14,10 @@ let suppliers = [
 
 export default class Suppliers extends Component {
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
+
+    this.fetchSuppliers = this.fetchSuppliers.bind(this);
 
     this.state = {
       suppliers: []
@@ -23,7 +25,7 @@ export default class Suppliers extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchSuppliers().then(suppliers => this.setState({ suppliers }))
+    this.props.actions.fetchSuppliers().then(suppliers => this.setState({ suppliers }))
   }
 
   render() {

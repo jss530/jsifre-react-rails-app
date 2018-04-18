@@ -14,3 +14,5 @@ export function fetchSuppliers() {
       });
   }
 }
+
+export default fetchSuppliers;
