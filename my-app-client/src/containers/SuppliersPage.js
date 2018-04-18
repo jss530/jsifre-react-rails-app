@@ -1,43 +1,37 @@
 import React, { Component } from 'react';
 import Suppliers from '../components/Suppliers';
-import SupplierService from '../services/SupplierService';
+import supplierActions from '../actions/supplierActions';
 import SuppliersShow from './SuppliersShow';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Route, Switch } from 'react-router-dom';
-import { fetchSuppliers } from '../actions/supplierActions';
+import * as actions from '../actions/supplierActions'
 
 
-class SuppliersPage extends Component {
+export class SuppliersPage extends Component {
+
+  componentDidMount() {
+    this.props.fetchSuppliers().then(suppliers => this.setState({ suppliers }))
+  }
 
   render() {
     return(
       <div>
-        <Suppliers suppliers={suppliers} />
+        <Suppliers/>
         <h3>Please select a supplier to see their available inventory.</h3>
       </div>
     )}
   }
 
-    const mapStateToProps = state => {
-      return {
-        suppliers: state.suppliers
-      };
-    }
+  function mapStateToProps(state) {
+    return {
+      suppliers: state.suppliers
+    };
+  }
+
+  function mapDispatchToProps(dispatch) {
+  return {actions: bindActionCreators(actions, dispatch)}
+}
 
 
-  const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({
-      fetchSuppliers: fetchSuppliers
-    }, dispatch);
-  };
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(SuppliersPage);
-
-
-
-// componentDidMount() {
-//   SupplierService.fetchSuppliers().then(suppliers => this.setState({ suppliers }))
-// }
-
-// // --need to refactor (add actions/reducers) -- i.e redux
+export const WrapperApp = connect(mapStateToProps, mapDispatchToProps)(SuppliersPage);

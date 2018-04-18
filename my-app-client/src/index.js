@@ -7,7 +7,6 @@ import registerServiceWorker from './registerServiceWorker';
 import thunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import { WrapperApp } from './App'
 import {browserHistory} from 'react-router';
 import {compose} from 'redux'
 import rootReducer from './reducers'
@@ -26,7 +25,7 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <WrapperApp/>
+    <App/>
   </Provider>,
     document.getElementById('root')
 )
