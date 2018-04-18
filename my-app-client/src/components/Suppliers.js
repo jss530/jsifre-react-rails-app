@@ -17,8 +17,6 @@ export default class Suppliers extends Component {
   constructor(props) {
     super(props)
 
-    this.fetchSuppliers = this.fetchSuppliers.bind(this);
-
     this.state = {
       suppliers: []
     }
@@ -31,8 +29,8 @@ export default class Suppliers extends Component {
   render() {
     return(
       <div>
-        <SuppliersPage suppliers={suppliers}/>
         <h3>Please select a supplier to see their available inventory.</h3>
+        <SuppliersPage suppliers={ suppliers }/>
       </div>
     )}
   }
