@@ -9,7 +9,7 @@ const About = () => {
         <div className="title">
           <h1>About Us</h1>
         </div>
-          <div id="content">
+          <div id="content" className="clearfix">
             <div className="col-1">
               <img src={carrots} alt={"carrots"}/>
             </div>

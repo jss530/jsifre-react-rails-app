@@ -1,18 +1,21 @@
 .border {
     position: fixed;
-    top: 0;
-    left: 0;
-    border: 12px solid #333333;
+    top: 50px;
+    border: 8px solid #333333;
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     box-sizing: border-box;
 }
 
 .title {
   text-align: center;
   padding: 20px
+}
+
+.clearfix {
+    overflow: auto;
 }
 
 #content .col-1 img {
@@ -22,7 +25,7 @@
 }
 
 #content .col-2 {
-  padding: 0px 10px 0px 10px;
+  padding: 0px 20px 0px 10px;
   text-align: center;
 }
 
