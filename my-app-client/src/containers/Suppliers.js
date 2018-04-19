@@ -14,8 +14,8 @@ class Suppliers extends Component {
 
   render() {
     return(
-      <div>
-        <h1>Suppliers</h1>
+      <div className="supplier-border">
+        <h1 className="title">Suppliers List</h1>
         <h3>Please select a supplier to see their available inventory.</h3>
         {this.props.suppliers.map(supplier => <SupplierCard key={supplier.id} supplier={supplier} />)}
       </div>
