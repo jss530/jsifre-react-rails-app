@@ -6,11 +6,11 @@ import {
 import thunk from 'redux-thunk';
 
 // import surfboards from './reducers/surfboards'; (form will go here)
-import supplierReducer from './reducers/supplierReducer';
+import suppliers from './reducers/suppliers';
 
 const reducers = combineReducers({
   // surfboards (form will go here),
-  supplierReducer
+  suppliers
 });
 const middleware = [thunk];
 
