@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SuppliersPage from './SuppliersPage';
-import { fetchSuppliers } from '../actions/supplierActions'
+import { fetchSuppliers } from '../actions/suppliers'
 import './Surfboards.css';
 
-let suppliers = [
-  {name: "ABC", location: "New York", id: 1},
-  {name: "EFG", location: "Boston", id: 2}
-]
 
 class Suppliers extends Component {
 
