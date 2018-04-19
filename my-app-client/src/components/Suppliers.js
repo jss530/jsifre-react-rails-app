@@ -29,7 +29,7 @@ class Suppliers extends Component {
     return(
       <div>
         <h3>Please select a supplier to see their available inventory.</h3>
-        <SuppliersPage suppliers={ suppliers }/>
+        <SuppliersPage suppliers={this.props.suppliers }/>
       </div>
     )
   };

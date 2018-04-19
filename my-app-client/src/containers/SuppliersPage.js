@@ -27,8 +27,8 @@ class SuppliersPage extends React.Component {
     super(props)
   }
 
-  renderSuppliers(suppliers) {
-      suppliers.map(supplier => {
+  renderSuppliers(props) {
+      this.props.suppliers.map(supplier => {
         return (
           <div>
             <Link to={`/suppliers/${supplier.id}`} key={supplier.id}>{supplier.name}</Link>
@@ -41,7 +41,7 @@ class SuppliersPage extends React.Component {
   render() {
     return(
       <div>
-        {this.renderSuppliers(this.props.suppliers)}
+        {this.renderSuppliers()}
       </div>
     )
   };
