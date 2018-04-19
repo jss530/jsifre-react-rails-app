@@ -1,15 +1,36 @@
+.border {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 12px solid #333333;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .title {
   text-align: center;
   padding: 20px
 }
 
-#content .col img {
+#content .col-1 img {
   float: left;
-  width: 50%;
+  width: 40%;
+  padding: 0px 10px 0px 10px;
 }
 
-#content .col .mission-statement {
-  list-style-type: upper-roman;
+#content .col-2 {
+  padding: 0px 10px 0px 10px;
   text-align: center;
+}
+
+#content .col-2 .mission-intro {
+  text-decoration: underline;
+}
+
+#content .col-2 .mission-statement {
+  list-style-type: upper-roman;
   list-style-position: inside;
 }
