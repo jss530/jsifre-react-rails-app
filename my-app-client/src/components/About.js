@@ -4,8 +4,8 @@ import eggplants from '../details/img/eggplant-med.jpg'
 
 const About = () => {
   return (
-    
-      <div>
+
+      <div className="body">
         <div className="title">
           <h1>About Us</h1>
         </div>
