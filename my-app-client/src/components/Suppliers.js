@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import SuppliersPage from '../containers/SuppliersPage';
-import supplierActions from '../actions/supplierActions';
-import SuppliersShow from '../containers/SuppliersShow';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Route, Switch } from 'react-router-dom';
 import * as actions from '../actions/supplierActions'
 
 let suppliers = [
@@ -12,7 +9,7 @@ let suppliers = [
   {name: "EFG", location: "Boston", id: 2}
 ]
 
-export default class Suppliers extends Component {
+class Suppliers extends Component {
 
   constructor(props) {
     super(props)
@@ -25,25 +22,28 @@ export default class Suppliers extends Component {
   componentDidMount() {
     this.props.actions.fetchSuppliers().then(suppliers => this.setState({ suppliers }))
   }
+  // do console.log of suppliers and see why response isnt rendering, check this one and fetchSuppliers
 
   render() {
+    console.log("Supplier equals", this.props.suppliers)
     return(
       <div>
         <h3>Please select a supplier to see their available inventory.</h3>
         <SuppliersPage suppliers={ suppliers }/>
       </div>
-    )}
-  }
+    )
+  };
+}
 
-  function mapStateToProps(state) {
-    return {
-      suppliers: state.suppliers
-    };
-  }
+function mapStateToProps(state) {
+  return {
+    suppliers: state.suppliers
+  };
+}
 
-  function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch) {
   return {actions: bindActionCreators(actions, dispatch)}
 }
 
 
-connect(mapStateToProps, mapDispatchToProps)(Suppliers);
+export default connect(mapStateToProps, mapDispatchToProps)(Suppliers);
