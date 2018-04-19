@@ -7,7 +7,7 @@ import {
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
-import Suppliers from './components/Suppliers';
+import Suppliers from './containers/Suppliers';
 import Purchasers from './components/Purchasers';
 
 
