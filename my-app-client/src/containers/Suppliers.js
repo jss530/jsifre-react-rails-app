@@ -1,22 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import SuppliersPage from './SuppliersPage';
-import { fetchSuppliers } from '../actions/suppliers'
-import './Surfboards.css';
+
+import SupplierCard from '../components/SupplierCard';
+import { getSuppliers } from '../actions/suppliers'
+import './Suppliers.css';
 
 
 class Suppliers extends Component {
 
-  // constructor(props) {
-  //   super(props)
-  //
-  //   this.state = {
-  //     suppliers: []
-  //   }
-  // }
-
   componentDidMount() {
-    this.props.fetchSuppliers()
+    this.props.getSuppliers()
     // .then(suppliers => this.setState({ suppliers }))
   }
   // do console.log of suppliers and see why response isnt rendering, check this one and fetchSuppliers
@@ -27,16 +20,15 @@ class Suppliers extends Component {
         <h1>Suppliers</h1>
         <h3>Please select a supplier to see their available inventory.</h3>
         {this.props.suppliers.map(supplier => <SupplierCard key={supplier.id} supplier={supplier} />)}
-        <SuppliersPage/>
       </div>
     )
   };
 }
 
-function mapStateToProps(state) {
-  return {
+const mapStateToProps = (state) => {
+  return ({
     suppliers: state.suppliers
-  };
+  })
 }
 
 // function mapDispatchToProps(dispatch) {
@@ -44,4 +36,4 @@ function mapStateToProps(state) {
 // }
 
 
-export default connect(mapStateToProps, { fetchSuppliers })(Suppliers);
+export default connect(mapStateToProps, { getSuppliers })(Suppliers);

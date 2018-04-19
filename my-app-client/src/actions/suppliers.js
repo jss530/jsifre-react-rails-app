@@ -1,5 +1,3 @@
-import fetch from 'isomorphic-fetch';
-
 const API_URL = process.env.REACT_APP_API_URL;
 
 const setSuppliers = suppliers => {
@@ -9,7 +7,7 @@ const setSuppliers = suppliers => {
   }
 }
 
-export const fetchSuppliers = () => {
+export const getSuppliers = () => {
   return dispatch => {
     return fetch(`${API_URL}/suppliers`)
       .then(response => response.json())
