@@ -19,7 +19,7 @@ class Suppliers extends Component {
               <h1>Suppliers List</h1>
             </div>
           </div>
-        <h3 className="supplier-instructions">Please select a supplier to see their available inventory.</h3>
+        <h3 className="supplier-instructions">Click on a supplier to see their available inventory.</h3>
         {this.props.suppliers.map(supplier => <SupplierCard key={supplier.id} supplier={supplier} />)}
       </div>
     );

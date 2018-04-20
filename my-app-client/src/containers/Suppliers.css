@@ -14,7 +14,7 @@
 
 .hero-text {
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -24,4 +24,37 @@
 
 .supplier-instructions {
   text-align: center;
+}
+
+#supplier-card {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#supplier-card a {
+  font-size: 18px; */
+  outline: none;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+}
+
+#supplier-card a::before {
+  margin-left: 10px;
+  content: '[';
+  transform: translateX(-20px);
+}
+
+#supplier-card a::after {
+  margin-right: 10px;
+  content: ']';
+  transform: translateX(-20px);
+}
+
+
+#supplier-card a::before, #supplier-card a::after {
+  transition: transform 0.3s, opacity 0.2s;
 }
