@@ -3,7 +3,7 @@
   text-decoration: underline;
 }
 
-
-.SupplierCard {
-
+.title-section #col-3 {
+  float: left;
+  width: 70%;
 }
