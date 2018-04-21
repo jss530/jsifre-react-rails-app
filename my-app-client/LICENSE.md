@@ -1,16 +1,4 @@
-Ugly Delicious
-
-Ugly Delicious is an application that connects grocery stores looking to sell imperfect inventory to individuals and other businesses.
-
-Installation Fork and clone the Online Library Repo (https://github.com/jss530/my-app).
-
-In one terminal window, change directories into my-app-api. Once there, make sure to bundle install and migrate. Finally, rails your rails server on port 3001.
-
-In the other window, change directories into my-app-client. Run npm install and start.
-
-Contributors Guide: When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
-
-Licensing statement MIT License
+MIT License
 
 Copyright (c) 2018 Jacqlene Sifre
 
