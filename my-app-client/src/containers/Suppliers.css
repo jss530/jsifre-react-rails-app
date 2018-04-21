@@ -22,12 +22,21 @@
     color: white;
 }
 
+.supplier-page #col-2 {
+    text-align: right;
+}
+
 .supplier-instructions {
   text-align: center;
 }
 
+.supplier-form #col-1 {
+  float: left;
+  width: 30%;
+}
+
 #supplier-card {
-  text-align: center;
+  text-align: right;
   padding-bottom: 20px;
 }
 
@@ -53,7 +62,6 @@
   content: ']';
   transform: translateX(-20px);
 }
-
 
 #supplier-card a::before, #supplier-card a::after {
   transition: transform 0.3s, opacity 0.2s;

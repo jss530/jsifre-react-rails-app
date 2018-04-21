@@ -24,7 +24,8 @@ class SupplierForm extends Component {
 
     return (
       <div>
-        <h3>Are you a supplier? Are you new to Ugly Delicious? Welcome! Sign up here:</h3>
+        <h3>Are you a supplier? Are you new to Ugly Delicious?<br/>
+        Welcome! Sign up here:</h3>
         <form onSubmit={this.handleOnSubmit}>
           <div>
             <label htmlFor="name">Business name:</label>
