@@ -10,6 +10,7 @@ const SuppliersShow = ({ supplier }) =>
         <p>{supplier.location}</p>
       </div>
     </div>
+    <p className="show-supplier-intro">Here's what's available:</p>
   </div>;
 
 
