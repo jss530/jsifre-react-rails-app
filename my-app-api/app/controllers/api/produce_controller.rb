@@ -7,7 +7,7 @@ class Api::ProduceController < ApplicationController
 
   def create
     product = Produce.new(produce_params)
-    if @roduct.save
+    if product.save
       render json: product
     else
       render json: { message: product.errors }, status: 400
