@@ -1,11 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import './SuppliersShow.css';
 
-const SuppliersShow = ({ supplier }) =>
-  <div>
-    <h2>{supplier.name}</h2>
-    <p>{supplier.location}</p>
-  </div>
+const SuppliersShow = ({ supplier }) => {
+
+  return (
+    <div className="show-supplier">
+      <div className="hero-image">
+        <div className="hero-text">
+          <h1>{supplier.name}</h1>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 const mapStateToProps = (state, ownProps) => {
   const supplier = state.suppliers.find(supplier => supplier.id === +ownProps.match.params.supplierId)
