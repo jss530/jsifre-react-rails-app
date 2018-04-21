@@ -14,6 +14,8 @@ class Suppliers extends Component {
   }
 
   render() {
+    const { match, suppliers } = this.props;
+
     return(
       <div className="supplier-page">
           <div className="hero-image">
@@ -27,6 +29,9 @@ class Suppliers extends Component {
             <div className="supplier-section">
               <h3 className="supplier-instructions">Click on a supplier to see their available inventory.</h3>
                 {this.props.suppliers.map(supplier => <SupplierCard key={supplier.id} supplier={supplier} />)}
+            </div>
+            <div className="show-supplier" id="show-supplier">
+              {this.props.children}
             </div>
       </div>
     );

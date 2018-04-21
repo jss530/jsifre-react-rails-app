@@ -8,7 +8,7 @@ const SuppliersShow = ({ supplier }) =>
   </div>
 
 const mapStateToProps = (state, ownProps) => {
-  const supplier = state.suppliers.find(supplier => supplier.id === ownProps.match.params.supplierId)
+  const supplier = state.suppliers.find(supplier => supplier.id === +ownProps.match.params.supplierId)
 
   if (supplier) {
     return { supplier }
