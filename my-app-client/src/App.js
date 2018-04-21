@@ -9,7 +9,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Suppliers from './containers/Suppliers';
 import SuppliersShow from './containers/SuppliersShow';
-import Purchasers from './components/Purchasers';
+import Buyers from './components/Buyers';
 
 
 const App = (props) => {
@@ -21,7 +21,7 @@ const App = (props) => {
             <Route exact path="/about" component={About} />
             <Route exact path="/suppliers" component={Suppliers} />
               <Route exact path="/suppliers/:supplierId" component={SuppliersShow} />
-            <Route exact path="/purchasers" component={Purchasers} />
+            <Route exact path="/buyers" component={Buyers} />
           </div>
         </Router>
       );
