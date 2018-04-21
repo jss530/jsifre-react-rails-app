@@ -10,7 +10,7 @@ import suppliers from './reducers/suppliers';
 
 const reducers = combineReducers({
   suppliers,
-  surfboardFormData
+  supplierFormData
 });
 const middleware = [thunk];
 
