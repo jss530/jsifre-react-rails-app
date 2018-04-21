@@ -1,5 +1,5 @@
 .show-supplier .hero-image {
-    background-image: url("../details/img/parsnips.jpg");
+    background-image: url("../details/img/medley-large.jpg");
     height: 400px;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,10 +9,14 @@
 
 .show-supplier .hero-text {
     text-align: center;
-    font-size: 25px;
+    font-size: 36px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: black;
+    padding: 40px 80px 40px 80px;
+    border-radius: 25px;
+    border: 2px solid #FFFFFF;
     color: white;
 }
