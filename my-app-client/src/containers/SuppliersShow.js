@@ -9,13 +9,10 @@ const SuppliersShow = ({ supplier }) =>
       <div className="hero-text">
         <h2>{supplier.name}</h2>
         <p>{supplier.location}</p>
-        <Produce key={supplier.produce.id} supplier={supplier} />
       </div>
     </div>
-    <div className="show-produce" id="show-produce">
       <p className="show-supplier-intro">Here's what's available:</p>
-        {this.props.children}
-    </div>
+      <Produce key={supplier.id} supplier={supplier} />
   </div>;
 
 
