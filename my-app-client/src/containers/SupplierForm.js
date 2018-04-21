@@ -23,10 +23,13 @@ class SupplierForm extends Component {
     const { name, location } = this.props.supplierFormData;
 
     return (
-      <div>
-        <h3>Are you a supplier? Are you new to Ugly Delicious?<br/>
+      <div className="form">
+        <h3 className="form-intro">Are you a supplier? Are you new to Ugly Delicious?
+        <br/>
+        <br/>
         Welcome! Sign up here:</h3>
         <form onSubmit={this.handleOnSubmit}>
+          <fieldset>
           <div>
             <label htmlFor="name">Business name:</label>
             <input
@@ -47,6 +50,7 @@ class SupplierForm extends Component {
           </div>
 
           <button type="submit">Sign up</button>
+        </fieldset>
         </form>
       </div>
     )
