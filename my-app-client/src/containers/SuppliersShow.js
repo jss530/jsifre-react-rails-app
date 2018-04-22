@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Produce from '../components/Produce'
 import './SuppliersShow.css';
 
 const SuppliersShow = ({ supplier }) =>
@@ -12,7 +11,6 @@ const SuppliersShow = ({ supplier }) =>
       </div>
     </div>
       <p className="show-supplier-intro">Here's what's available:</p>
-      <Produce key={supplier.id} supplier={supplier} />
   </div>;
 
 

@@ -3,8 +3,12 @@ import './Buyers.css';
 
 const Buyers = () => {
   return (
-      <div>
-        <h1> Buyers Page </h1>
+      <div className="buyers-page">
+        <div className="hero-image">
+          <div className="hero-text">
+            <h1>Buyers</h1>
+          </div>
+        </div>
       </div>
     )
   }

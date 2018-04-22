@@ -38,13 +38,13 @@ const Navbar = () => {
         }}
       >Suppliers</NavLink>
       <NavLink
-        to="/purchasers"
+        to="/buyers"
         exact
         style={link}
         activeStyle={{
           color: 'black'
         }}
-      >Purchasers</NavLink>
+      >Buyers</NavLink>
     </div>
   );
 };
