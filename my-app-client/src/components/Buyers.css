@@ -16,3 +16,14 @@
     transform: translate(-50%, -50%);
     color: white;
 }
+
+.buyers-intro {
+  text-align: center;
+  width: 800px;
+  margin: 0 auto;
+}
+
+#opening-statement {
+  font-weight: bold;
+  font-size: 25px;
+}
