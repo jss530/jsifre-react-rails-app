@@ -25,6 +25,6 @@ class Api::ProduceController < ApplicationController
   end
 
   def produce_params
-    params.require(:product).permit(:name, :quantity)
+    params.require(:product).permit(:name, :quantity, :inventory)
   end
 end

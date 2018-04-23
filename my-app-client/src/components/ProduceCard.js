@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ProduceCard = ({ supplier }) => {
-  debugger;
   const renderProduce = supplier.produce.map(produce =>
       <div>
         <h4 key={produce.id}> {produce.name} </h4>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Home = () => {
-  
+
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +15,6 @@ const Home = () => {
              <p>Welcome to Ugly Delicious. We connect grocery stores looking to sell imperfect produce with
              individuals and businesses looking to purchase them.</p>
              <br/>
-             <button type="button" id="intro-button">Get started</button>
            </div>
          </div>
       </div>
