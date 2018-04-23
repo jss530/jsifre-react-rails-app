@@ -27,3 +27,13 @@
   font-weight: bold;
   font-size: 25px;
 }
+
+.how-to {
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+  text-decoration: underline;
+}
+
+.instructions {
+  font-size: 20px;
+}
