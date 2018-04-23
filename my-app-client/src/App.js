@@ -9,6 +9,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Suppliers from './containers/Suppliers';
 import SuppliersShow from './containers/SuppliersShow';
+import ProduceCard from './components/ProduceCard';
 import Buyers from './components/Buyers';
 
 
@@ -21,6 +22,7 @@ const App = (props) => {
             <Route exact path="/about" component={About} />
             <Route exact path="/suppliers" component={Suppliers} />
               <Route exact path="/suppliers/:supplierId" component={SuppliersShow} />
+              <Route exact path="/suppliers/:supplierId" component={ProduceCard} />
             <Route exact path="/buyers" component={Buyers} />
           </div>
         </Router>
