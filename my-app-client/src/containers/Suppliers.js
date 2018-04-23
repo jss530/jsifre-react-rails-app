@@ -15,7 +15,6 @@ class Suppliers extends Component {
 
   render() {
     const { match, suppliers } = this.props;
-
     return(
       <div className="supplier-page">
           <div className="hero-image">

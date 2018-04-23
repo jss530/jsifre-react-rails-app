@@ -11,6 +11,7 @@ const SuppliersShow = ({ supplier }) =>
       </div>
     </div>
       <p className="show-supplier-intro">Here's what's available:</p>
+
   </div>;
 
 
