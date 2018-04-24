@@ -16,13 +16,6 @@ const addSupplier = supplier => {
   }
 }
 
-const setProduce = produce => {
-  return {
-    type: 'GET_PRODUCE_SUCCESS',
-    produce
-  }
-}
-
 export const getSuppliers = () => {
   return dispatch => {
     return fetch(`${API_URL}/suppliers`)
@@ -47,14 +40,5 @@ export const createSupplier = supplier => {
         dispatch(resetSupplierForm())
       })
       .catch(error => console.log(error))
-  }
-}
-
-export const getProduce = (supplier) => {
-  return dispatch => {
-    return fetch(`${API_URL}/suppliers/${supplier.id}/produce`)
-      .then(response => response.json())
-      .then(produce => dispatch(setProduce(produce)))
-      .catch(error => console.log(error));
   }
 }

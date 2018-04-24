@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import ProduceCard from '../components/ProduceCard';
 import './SuppliersShow.css';
 import { Link } from 'react-router-dom';
 
@@ -12,8 +11,7 @@ const SuppliersShow = ({ supplier }) =>
         <p>{supplier.location}</p>
       </div>
     </div>
-      <Link to={`/suppliers/${supplier.id}/produce`}>Here's what's available:</Link>
-      <ProduceCard />
+      <h1> Here's what's available at {supplier.name}: </h1>
   </div>;
 
 

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import SupplierCard from '../components/SupplierCard';
-import ProduceCard from '../components/ProduceCard';
 import SuppliersShow from './SuppliersShow';
 import SupplierForm from './SupplierForm';
 import { getSuppliers } from '../actions/suppliers';
