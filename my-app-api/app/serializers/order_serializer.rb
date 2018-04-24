@@ -1,4 +1,4 @@
 class SupplierSerializer < ActiveModel::Serializer
   attributes :name, :location
-  has_many :produces
+  has_many :produce
 end
