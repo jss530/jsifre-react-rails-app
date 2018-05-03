@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './SuppliersShow.css';
-import { Link } from 'react-router-dom';
 
 const SuppliersShow = ({ supplier }) =>
   <div className="show-supplier">

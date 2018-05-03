@@ -7,6 +7,9 @@ export default (state = [], action) => {
       //return [...state, action.supplier]
       return state.concat(action.supplier);
 
+    case 'GET_PRODUCE_SUCCESS':
+      return action.produce;  
+
     default:
       return state;
   }

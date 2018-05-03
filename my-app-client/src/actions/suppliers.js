@@ -25,6 +25,22 @@ export const getSuppliers = () => {
   }
 }
 
+const setProduce = produce => {
+  return {
+    type: 'GET_PRODUCE_SUCCESS',
+    produce
+  }
+}
+
+export const getProduce = () => {
+  return dispatch => {
+    return fetch(`${API_URL}/suppliers/:supplierId/produce`)
+      .then(response => response.json())
+      .then(produce => dispatch(setProduce(produce)))
+      .catch(error => console.log(error));
+  }
+}
+
 export const createSupplier = supplier => {
   return dispatch => {
     return fetch(`${API_URL}/suppliers`, {

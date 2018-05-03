@@ -22,7 +22,7 @@ class SupplierCard extends React.Component {
 
     return (
       <div key={supplier.id} id="supplier-card">
-        <Link to={`/suppliers/${supplier.id}`} key={supplier.id}>{supplier.name}</Link>
+        <Link to={`/suppliers/${supplier.id}/produce`} key={supplier.id}>{supplier.name}</Link>
         <p><strong>Location:</strong> {supplier.location}</p>
         <button onClick={this.addLike}>Like this</button> {this.state.likes}
       </div>
