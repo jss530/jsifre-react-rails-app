@@ -1,3 +1,3 @@
 class Supplier < ApplicationRecord
-  has_many :produce
+  has_many :produces
 end
