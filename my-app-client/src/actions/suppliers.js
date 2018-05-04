@@ -32,9 +32,9 @@ const setProduce = produces => {
   }
 }
 
-export const getProduce = produce => {
+export const getProduce = supplierId => {
   return dispatch => {
-    return fetch(`${API_URL}/suppliers/${produce.supplier_id}/produce`)
+    return fetch(`${API_URL}/suppliers/${supplierId}/produce`)
       .then(response => response.json())
       .then(produces => dispatch(setProduce(produces)))
       .catch(error => console.log(error));

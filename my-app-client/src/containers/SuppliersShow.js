@@ -7,7 +7,8 @@ import { getProduce } from '../actions/suppliers';
 class SuppliersShow extends Component {
 
   componentDidMount() {
-    this.props.getProduce()
+
+    this.props.getProduce(this.props.match.params.supplierId)
   }
 
   render() {
@@ -21,7 +22,7 @@ class SuppliersShow extends Component {
           </div>
             <div className="produce-section">
               <h3 className="produce-intro">Here's what's available:</h3>
-              <p>Cannot get this to render</p>
+              {this.props.produces.map(produce => <ProduceCard key={produce.id} produce={produce} />)}
             </div>
             <div className="show-produce" id="show-produce">
               {this.props.children}
