@@ -25,18 +25,18 @@ export const getSuppliers = () => {
   }
 }
 
-const setProduce = produce => {
+const setProduce = produces => {
   return {
     type: 'GET_PRODUCE_SUCCESS',
-    produce
+    produces
   }
 }
 
-export const getProduce = () => {
+export const getProduce = produce => {
   return dispatch => {
-    return fetch(`${API_URL}/suppliers/:supplierId/produce`)
+    return fetch(`${API_URL}/suppliers/${produce.supplier_id}/produce`)
       .then(response => response.json())
-      .then(produce => dispatch(setProduce(produce)))
+      .then(produces => dispatch(setProduce(produces)))
       .catch(error => console.log(error));
   }
 }

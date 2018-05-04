@@ -2,9 +2,9 @@ class Api::ProduceController < ApplicationController
 
   def index
     @supplier = Supplier.find_by(id: params[:supplier_id])
-    @produce = @supplier.produces
+    @produces = @supplier.produces
 
-    render json: @produce
+    render json: @produces
   end
 
   def create

@@ -7,9 +7,11 @@ import thunk from 'redux-thunk';
 
 import supplierFormData from './reducers/supplierFormData';
 import suppliers from './reducers/suppliers';
+import produces from './reducers/produce';
 
 const reducers = combineReducers({
   suppliers,
+  produces,
   supplierFormData
 });
 const middleware = [thunk];
