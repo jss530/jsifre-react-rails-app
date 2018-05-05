@@ -58,3 +58,10 @@ export const createSupplier = supplier => {
       .catch(error => console.log(error))
   }
 }
+
+export const likeSupplier = supplier => {
+  return {
+    type: 'LIKE_SUPPLIER',
+    supplier
+  }
+}
