@@ -22,6 +22,7 @@ class SuppliersShow extends Component {
           </div>
             <div className="produce-section">
               <h3 className="produce-intro">Here's what's available:</h3>
+              <h4 id="produce-intro-2">(Hint: hover your mouse over each product to see more details!)</h4>
               {this.props.produces.map(produce => <ProduceCard key={produce.id} produce={produce} />)}
             </div>
             <div className="show-produce" id="show-produce">
