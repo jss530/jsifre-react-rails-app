@@ -1,6 +1,6 @@
 function suppliersReducer (state = [], action) {
-  let index;
   let supplier;
+  let index;
 
   switch(action.type) {
     case 'GET_SUPPLIERS_SUCCESS':
@@ -13,11 +13,13 @@ function suppliersReducer (state = [], action) {
       index = state.findIndex(supplier => supplier.id === action.supplierId);
       supplier = state[index];
 
-      return [
-        ...state.slice(0, index),
-        Object.assign({}, supplier, { likes: supplier.likes += 1 }),
-        ...state.slice(index + 1)
-      ];
+      if (supplier.likes >= 0) {
+        return [
+          ...state.slice(0, index),
+          Object.assign({}, supplier, { likes: supplier.likes += 1 }),
+          ...state.slice(index + 1)
+        ];
+      }
 
     default:
       return state;

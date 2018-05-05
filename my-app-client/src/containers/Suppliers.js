@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import SupplierCard from '../components/SupplierCard';
 import SuppliersShow from './SuppliersShow';
 import SupplierForm from './SupplierForm';
-import { getSuppliers } from '../actions/suppliers';
+import { getSuppliers, likeSupplier } from '../actions/suppliers';
 import './Suppliers.css';
 
 class Suppliers extends Component {
@@ -14,7 +14,7 @@ class Suppliers extends Component {
   }
 
   render() {
-    const { match, suppliers } = this.props;
+    const { match, suppliers, likeSupplier } = this.props;
     return(
       <div className="supplier-page">
           <div className="hero-image">
@@ -27,7 +27,7 @@ class Suppliers extends Component {
             </div>
             <div className="supplier-section">
               <h3 className="supplier-instructions">Click on a supplier to see their available inventory.</h3>
-                {this.props.suppliers.map(supplier => <SupplierCard key={supplier.id} supplier={supplier} />)}
+                {suppliers.map(supplier => <SupplierCard key={supplier.id} likeSupplier={likeSupplier} supplier={supplier} />)}
             </div>
             <div className="show-supplier" id="show-supplier">
               {this.props.children}
@@ -43,4 +43,4 @@ const mapStateToProps = (state) => {
   })
 }
 
-export default connect(mapStateToProps, { getSuppliers })(Suppliers);
+export default connect(mapStateToProps, { getSuppliers, likeSupplier })(Suppliers);

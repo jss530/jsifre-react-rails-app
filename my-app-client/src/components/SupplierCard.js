@@ -1,25 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { likeSupplier } from '../actions/suppliers';
 
-class SupplierCard extends React.Component {
 
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-    const {supplier} = this.props;
-
-    return (
+const SupplierCard = ({ supplier, likeSupplier }) =>
       <div key={supplier.id} id="supplier-card">
         <Link to={`/suppliers/${supplier.id}/produce`} key={supplier.id}>{supplier.name}</Link>
         <p><strong>Location:</strong> {supplier.location}</p>
-        <button onClick={() => likeSupplier(supplier.id)} >Like this</button> {supplier.likes}
+        <button onClick={() => likeSupplier(supplier.id)} >Like this</button>
+        <p>Likes: {supplier.likes} </p>
       </div>
-    )
-  }
-}
+
 
 export default SupplierCard;

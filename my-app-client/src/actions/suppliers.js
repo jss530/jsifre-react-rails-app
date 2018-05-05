@@ -12,7 +12,7 @@ const setSuppliers = suppliers => {
 const addSupplier = supplier => {
   return {
     type: 'CREATE_SUPPLIER_SUCCESS',
-    supplier
+    supplier: Object.assign({}, supplier, { likes: 0 })
   }
 }
 

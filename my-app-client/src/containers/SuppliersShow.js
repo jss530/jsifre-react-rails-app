@@ -7,7 +7,6 @@ import { getProduce } from '../actions/suppliers';
 class SuppliersShow extends Component {
 
   componentDidMount() {
-
     this.props.getProduce(this.props.match.params.supplierId)
   }
 
