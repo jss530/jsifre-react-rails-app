@@ -59,9 +59,9 @@ export const createSupplier = supplier => {
   }
 }
 
-export const likeSupplier = supplier => {
+export const likeSupplier = supplierId => {
   return {
     type: 'LIKE_SUPPLIER',
-    supplier
+    supplierId
   }
 }

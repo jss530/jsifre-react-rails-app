@@ -7,10 +7,6 @@ class SupplierCard extends React.Component {
 
   constructor(props) {
     super(props)
-
-    this.state = {
-      likes: 0
-    }
   }
 
   render() {
@@ -20,15 +16,10 @@ class SupplierCard extends React.Component {
       <div key={supplier.id} id="supplier-card">
         <Link to={`/suppliers/${supplier.id}/produce`} key={supplier.id}>{supplier.name}</Link>
         <p><strong>Location:</strong> {supplier.location}</p>
-        <button onClick={this.state.likeSupplier()}>Like this</button> {this.state.likes}
+        <button onClick={() => likeSupplier(supplier.id)} >Like this</button> {supplier.likes}
       </div>
     )
   }
 }
 
-const mapStateToProps = state => ({
-  supplier: state.supplier,
-});
-
-
-export default connect(mapStateToProps, {likeSupplier})(SupplierCard);
+export default SupplierCard;
