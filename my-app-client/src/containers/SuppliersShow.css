@@ -21,9 +21,13 @@
     color: white;
 }
 
-.show-supplier-intro {
+.produce-section .produce-intro {
   font-weight: bold;
   text-align: center;
   font-size: 25px;
   text-decoration: underline;
+}
+
+.produce-card {
+  text-align: center;
 }
