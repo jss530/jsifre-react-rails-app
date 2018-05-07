@@ -1,5 +1,4 @@
 function suppliersReducer (state = [], action) {
-  let supplier;
 
   switch(action.type) {
     case 'GET_SUPPLIERS_SUCCESS':
@@ -9,14 +8,10 @@ function suppliersReducer (state = [], action) {
       return state.concat(action.supplier);
 
     case 'LIKE_SUPPLIER':
-      suppliers: state.suppliers.map( (supplier) => {
-
-        if (supplier.id === action.supplierId) {
-           return supplier.likes += 1
-        }
-
-        return supplier;
-      });
+      let supplier = state.find(supplier => supplier.id === action.supplierId);
+      Object.assign({}, supplier, { likes: supplier.likes += 1 })
+      debugger;
+      return state;
 
     default:
       return state;
