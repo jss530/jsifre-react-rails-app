@@ -13,6 +13,7 @@ class Suppliers extends Component {
     this.props.getSuppliers()
   }
 
+
   render() {
     const { match, suppliers, likeSupplier } = this.props;
     return(
