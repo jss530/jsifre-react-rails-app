@@ -8,16 +8,7 @@ function suppliersReducer (state = [], action) {
       return state.concat(action.supplier);
 
     case 'LIKE_SUPPLIER':
-      let index = state.findIndex(supplier => supplier.id === action.supplierId);
-      let supplier = state[index];
-
-      return [
-        ...state.slice(0, index),
-        Object.assign({}, supplier, { likes: supplier.likes += 1 }),
-        ...state.slice(index + 1)
-      ];
-
-
+      return state.map(supplier => supplier.id === action.supplierId ? Object.assign({}, supplier, { likes: supplier.likes += 1 }) : supplier)
     default:
       return state;
   }

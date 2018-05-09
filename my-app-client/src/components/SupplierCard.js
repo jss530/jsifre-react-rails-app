@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const SupplierCard = ({ supplier, likeSupplier }) =>
+const SupplierCard = ({ supplier, addLike }) =>
       <div key={supplier.id} id="supplier-card">
         <Link to={`/suppliers/${supplier.id}/produce`} key={supplier.id}>{supplier.name}</Link>
         <p><strong>Location:</strong> {supplier.location}</p>
-        <button onClick={() => likeSupplier(supplier.id)} >Like this</button>
+        <button onClick={() => addLike(supplier.id)} >Like this</button>
         <p>Likes: {supplier.likes} </p>
       </div>
 
