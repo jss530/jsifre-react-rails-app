@@ -67,16 +67,18 @@ const likeSupplier = supplierId => {
 }
 
 export const addLike = supplier => {
+  let likes = supplier.likes
+
    return dispatch => {
      return fetch(`${API_URL}/suppliers`, {
-         method: 'PATCH',
-         headers: {
-          'Content-Type': 'application/json'
-         },
-         body: JSON.stringify({ this.likes: likes })
-       })
+       method: "POST",
+       headers: {
+         'Content-Type': 'application/json'
+       },
+        supplier: JSON.stringify({ likes: likes += 1 })
+        })
        .then(response => response.json())
-       .then(supplier => {
+       .then(supplierId => {
          dispatch(likeSupplier(supplier.id))
        })
        .catch(error => console.log(error))
