@@ -18,6 +18,19 @@ class Api::SuppliersController < ApplicationController
     render json: @supplier
   end
 
+  def edit
+    @supplier = Supplier.find(params[:id])
+  end
+
+  def update
+    @supplier = Supplier.find(params[:id])
+    if @supplier.update(supplier_params)
+      render json: @supplier
+    else
+      render json: { message: supplier.errors }, status: 400
+    end
+  end
+
   private
 
   def set_supplier
