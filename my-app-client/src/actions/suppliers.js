@@ -69,12 +69,12 @@ const likeSupplier = supplierId => {
 export const addLike = supplier => {
    return dispatch => {
      return fetch(`${API_URL}/suppliers`, {
-       method: "PATCH",
-       headers: {
-        'Content-Type': 'application/json'
-       },
-       body: JSON.stringify({ supplier: supplier })
-     })
+         method: 'PATCH',
+         headers: {
+          'Content-Type': 'application/json'
+         },
+         body: JSON.stringify({ this.likes: likes })
+       })
        .then(response => response.json())
        .then(supplier => {
          dispatch(likeSupplier(supplier.id))
