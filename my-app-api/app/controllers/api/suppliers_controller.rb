@@ -25,11 +25,11 @@ class Api::SuppliersController < ApplicationController
   end
 
   def edit
-    supplier = Supplier.find(params[:id])
+    supplier = Supplier.find_by(id: params[:id])
   end
 
   def update
-    supplier = Supplier.find(params[:id])
+    supplier = Supplier.find_by(id: params[:id])
     if supplier.update(supplier_params)
       render json: supplier
     else

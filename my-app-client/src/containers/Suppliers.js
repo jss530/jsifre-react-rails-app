@@ -9,6 +9,14 @@ import './Suppliers.css';
 
 class Suppliers extends Component {
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      suppliers: []
+    }
+  }
+
   componentDidMount() {
     this.props.getSuppliers()
   }
