@@ -1,8 +1,9 @@
+
 class Api::SuppliersController < ApplicationController
 
   def index
-    @suppliers = Supplier.all
-    render json: @suppliers
+    suppliers = Supplier.all
+    render json: suppliers
   end
 
   def create
@@ -15,17 +16,22 @@ class Api::SuppliersController < ApplicationController
   end
 
   def show
-    render json: @supplier
+    supplier = Supplier.find_by(id: params[:id])
+    if supplier
+      render json: supplier
+    else
+      render json: { message: supplier.errors }, status: 400
+    end
   end
 
   def edit
-    @supplier = Supplier.find(params[:id])
+    supplier = Supplier.find(params[:id])
   end
 
   def update
-    @supplier = Supplier.find(params[:id])
-    if @supplier.update(supplier_params)
-      render json: @supplier
+    supplier = Supplier.find(params[:id])
+    if supplier.update(supplier_params)
+      render json: supplier
     else
       render json: { message: supplier.errors }, status: 400
     end
@@ -34,10 +40,10 @@ class Api::SuppliersController < ApplicationController
   private
 
   def set_supplier
-    @supplier = Supplier.find_by(id: params[:id])
+    supplier = Supplier.find_by(id: params[:id])
   end
 
   def supplier_params
-    params.require(:supplier).permit(:name, :location)
+    params.fetch(:supplier, {}).permit(:name, :location, :likes)
   end
 end

@@ -70,8 +70,8 @@ export const addLike = supplier => {
   let likes = supplier.likes
 
    return dispatch => {
-     return fetch(`${API_URL}/suppliers`, {
-       method: "POST",
+     return fetch(`${API_URL}/suppliers/${supplier.id}`, {
+       method: "PATCH",
        headers: {
          'Content-Type': 'application/json'
        },
