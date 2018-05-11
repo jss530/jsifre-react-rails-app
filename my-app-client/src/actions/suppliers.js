@@ -75,7 +75,7 @@ export const addLike = supplier => {
        headers: {
          'Content-Type': 'application/json'
        },
-        body: JSON.stringify(supplier, { likes: likes})
+        body: JSON.stringify(supplier, { likes: likes })
         })
        .then(response => response.json())
        .then(supplierId => {
