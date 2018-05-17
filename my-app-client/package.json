@@ -1,6 +1,5 @@
 {
   "name": "my-app-client",
-  "homepage": "jss530.github.io/ugly-delicious",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
