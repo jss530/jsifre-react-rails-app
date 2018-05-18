@@ -1,6 +1,6 @@
 {
-  "name": "my-app-client",
   "homepage": "https://jss530.github.io/jsifre-ugly-delicious",
+  "name": "my-app-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
