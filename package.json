@@ -5,7 +5,7 @@
   },
   "scripts": {
     "build": "cd my-app-client && npm install && npm run build && cd ..",
-    "deploy": "cp -a client/build/. public/",
+    "deploy": "cp -a my-app-client/build/. public/",
     "postinstall": "npm run build && npm run deploy"
   },
   "dependencies": {
