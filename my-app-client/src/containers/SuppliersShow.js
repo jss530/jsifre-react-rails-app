@@ -10,17 +10,6 @@ class SuppliersShow extends Component {
     this.props.getProduce(this.props.match.params.supplierId)
   }
 
-  callApi = () => {
-    fetch(`http://localhost:3001/api/suppliers`)
-      .then(response => {
-        console.log('b')
-
-        return response.json()
-      })
-      .then(suppliers => console.log('c', suppliers))
-      .catch(error => console.log('d', error))
-  }
-
   render() {
     const { match, produces } = this.props;
     return(
@@ -38,7 +27,6 @@ class SuppliersShow extends Component {
             <div className="show-produce" id="show-produce">
               {this.props.children}
             </div>
-            <button onClick={this.callApi}>Call Api</button>
       </div>
     );
   }
